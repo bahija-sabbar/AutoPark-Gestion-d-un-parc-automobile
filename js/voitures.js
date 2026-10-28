@@ -110,17 +110,17 @@ formulaire.addEventListener("submit", (e) => {
     const prixValue =   Number(prixJour.value);
     const statutValue = statut.value.trim();
 
-    //    if (!marqueValue || !modeleValue || !immatriculationValue || !categorieValue || !statutValue || prixJour.value.trim() === '') {
-    //     alert("Veuillez remplir tous les champs");
-    //     return;
-    // }
-    // if( isNaN(prixValue) ||prixValue<0){
-    //     alert("le prix doit etre str positif!");
-    //     return;
-    // }
-    // if(immatriculationValue=){
+       if (!marqueValue || !modeleValue || !immatriculationValue || !categorieValue || !statutValue || prixJour.value.trim() === '') {
+        alert("Veuillez remplir tous les champs");
+        return;
+    }
+    if( isNaN(prixValue) ||prixValue<0){
+        alert("le prix doit etre str positif!");
+        return;
+    }
+    if(immatriculationValue=){
 
-    // }
+    }
 
     const nouveauVoiture = {
         id: nbrId++,
