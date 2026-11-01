@@ -6,8 +6,8 @@ Projet individuel DWWM - Atlas Auto, agence fictive de location de voitures.
 Application web vanilla JS permettant de gérer un parc automobile sans backend, avec persistance via localStorage.
 
 ### 🔗 Liens
-- **Démo en ligne:** https://ton-lien-vercel.vercel.app
-- **Repo GitHub:**[ https://github.com/ton-pseudo/autopark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
+- **Démo en ligne:** (https://bahija-sabbar.github.io/AutoPark-Gestion-d-un-parc-automobile/)
+- **Repo GitHub:**(https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
 - **Jira:**![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image.png)
 - ![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image2.png))
 ---
@@ -66,9 +66,16 @@ L'application fonctionne 100% côté client.
 - Si parc vidé volontairement, il reste vide
 
 **4.8 Dashboard:**
-- Header AutoPark + navigation entre pages
-- 4 compteurs: Total, Disponibles, Louées, En maintenance calculés avec `filter()`
-- Responsive mobile / tablette / desktop
-- Même source de données que la gestion (localStorage)
 
 ### 📁 Structure des fichiers
+/
+├── index.html              # Dashboard (réalisé entièrement)
+├── voitures.html           # Gestion du parc (starter rendu interactif)
+├── css/
+│   ├── style.css           # Starter
+│  
+├── js/
+│   ├── data.js             # Données initiales (6 voitures)
+│   ├── voitures.js         # Toute la logique CRUD + filtres + localStorage + validation
+│   └── jira                # les images de jira
+└── README.md
