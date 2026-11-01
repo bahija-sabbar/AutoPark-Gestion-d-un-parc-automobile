@@ -1,104 +1,74 @@
-# AutoPark — Starter apprenant
 
-Projet individuel · 5 jours · HTML / CSS / JavaScript Vanilla ES6+
+# AutoPark - Gestion de Parc Automobile
 
-## Ce qui est fourni
+Projet individuel DWWM - Atlas Auto, agence fictive de location de voitures.
 
-- `voitures.html` : la page **Gestion du parc**, sans images.
-- `css/style.css` : le style complet et responsive.
-- `js/data.js` : six voitures fictives sous forme de tableau d'objets exporté.
-- `js/voitures.js` : point d'entrée JavaScript avec des étapes, sans implémentation.
+Application web vanilla JS permettant de gérer un parc automobile sans backend, avec persistance via localStorage.
 
-Le formulaire, la recherche, les filtres et les boutons sont **statiques**.
-Les six lignes du tableau sont uniquement des exemples HTML. Elles correspondent
-aux données fournies et doivent être remplacées par votre affichage JavaScript.
-Aucune fonctionnalité JavaScript du brief n'est réalisée dans ce starter.
+### 🔗 Liens
+- **Démo en ligne:** https://ton-lien-vercel.vercel.app
+- **Repo GitHub:**[ https://github.com/ton-pseudo/autopark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
+- **Jira:**![Aperçu AutoPark](./image.png)
+- ![Aperçu AutoPark](./image2.png)
+---
 
-## Lancer le projet
+### 🚀 Présentation
+AutoPark est composée de 2 pages:
+1.  **Gestion du parc (`voitures.html`):** Tableau dynamique, ajout, modification, suppression, recherche, filtres et tri.
+2.  **Dashboard (`index.html`):** 4 indicateurs calculés en temps réel.
 
-1. Ouvrir le dossier dans VS Code.
-2. Démarrer un serveur local avec Live Server, puis ouvrir `voitures.html`.
-3. Autre possibilité, si Python est installé : `python -m http.server 8000`,
-   puis ouvrir `http://localhost:8000/voitures.html`.
+L'application fonctionne 100% côté client.
 
-Un serveur local est nécessaire pour travailler avec les modules ES6.
-La racine du serveur ne contient pas encore de page `index.html` : ouvrir
-explicitement `voitures.html` au démarrage.
+### 🛠️ Technologies
+- HTML5 sémantique
+- CSS3 responsive (starter fourni + dashboard custom)
+- JavaScript Vanilla ES6+ (modules `import/export`)
+- localStorage pour la persistance
+- Git / GitHub
+- Jira pour le suivi
 
-## La seconde page est à créer
+### ✨ Fonctionnalités réalisées
 
-Le lien « Dashboard » pointe vers `index.html`. **Ce fichier n'est pas fourni** :
-c'est votre deuxième mission. Tant que vous ne l'avez pas créé, ce lien ne mène
-pas à une page existante.
+**4.2 Affichage:**
+- Génération dynamique du tableau avec `forEach()`
+- Badges visuels selon statut (Disponible / Louée / En maintenance)
+- Message état vide géré avec `#etat-vide`
 
-Créer sa structure HTML, son CSS et son JavaScript. Afficher quatre compteurs :
-total, disponibles, louées et en maintenance. Lire les mêmes données que la page
-de gestion. Aucun graphique ni bibliothèque de graphiques n'est nécessaire.
+**4.3 Ajout:**
+- `trim()` pour refuser les espaces seuls
+- Contrôle prix > 0
+- **Regex immatriculation:** `^[A-Z]{3}-[0-9]{3}$` (ex: ABC-123)
+- Anti-doublon avec `some()` + `toLowerCase().trim()`
+- Erreurs affichées près des champs `#erreur-*`
+- Ajout sans rechargement + confirmation
 
-## Travail JavaScript à réaliser
+**4.4 Modification:**
+- Bouton Modifier préremplit le formulaire avec `findIndex()`
+- Garde le même `id`, permet de conserver son immatriculation
+- Bouton Annuler pour quitter le mode édition
+- `scrollIntoView({behavior: 'smooth'})`
 
-1. Importer les données initiales et générer les lignes du tableau.
-2. Ajouter une voiture et valider les champs.
-3. Modifier une voiture via le même formulaire et permettre l'annulation.
-4. Supprimer après confirmation.
-5. Combiner recherche, filtres et tri numérique des prix.
-6. Sauvegarder avec `localStorage` et JSON ; récupérer les données au chargement.
-7. Organiser les responsabilités dans des modules réutilisables.
-8. Réaliser le dashboard et vérifier les données sur les deux pages.
+**4.5 Suppression:**
+- `confirm()` avant suppression
+- Suppression avec `filter()` + `length = 0` + `push()`
 
-Utiliser les données initiales uniquement en l'absence de sauvegarde. Un tableau
-vide sauvegardé doit rester vide. Les compteurs sont actualisés à l'ouverture
-ou au rechargement du dashboard.
+**4.6 Recherche / Filtres / Tri:**
+- Recherche instantanée `input` event sur marque, modèle, immatriculation avec `includes()`
+- Filtres catégorie et statut
+- Tri numérique prix croissant / décroissant avec `sort()`
+- `appliquerFiltres()` combine tous les critères
+- Bouton réinitialiser + message si aucun résultat
 
-## Repères du HTML
+**4.7 Persistance:**
+- `localStorage` avec `JSON.stringify()` / `JSON.parse()`
+- Sauvegarde après chaque CRUD via fonction `sauvegarder()`
+- Au chargement: si sauvegarde existe on l'utilise, sinon on utilise `data.js`
+- Si parc vidé volontairement, il reste vide
 
-| Élément | Sélecteur |
-| --- | --- |
-| Formulaire | `#formulaire-voiture` |
-| Identifiant en cours de modification | `#voiture-id` |
-| Titre du formulaire | `#titre-formulaire` |
-| Marque / modèle | `#marque` / `#modele` |
-| Immatriculation | `#immatriculation` |
-| Catégorie / statut | `#categorie` / `#statut` |
-| Prix | `#prix-jour` |
-| Bouton d'enregistrement | `#bouton-enregistrer` |
-| Annulation de la modification | `#annuler-modification` |
-| Message du formulaire | `#message-formulaire` |
-| Corps du tableau | `#liste-voitures` |
-| Recherche | `#recherche` |
-| Filtres | `#filtre-statut` / `#filtre-categorie` |
-| Tri | `#tri-prix` |
-| Réinitialisation | `#reinitialiser-filtres` |
-| Message de gestion | `#message-parc` |
-| État vide / texte | `#etat-vide` / `#texte-etat-vide` |
+**4.8 Dashboard:**
+- Header AutoPark + navigation entre pages
+- 4 compteurs: Total, Disponibles, Louées, En maintenance calculés avec `filter()`
+- Responsive mobile / tablette / desktop
+- Même source de données que la gestion (localStorage)
 
-Les boutons de démonstration portent `data-action="modifier"` ou
-`data-action="supprimer"`, et `data-id` indique l'identifiant de la voiture.
-Conserver ces repères lors de la génération dynamique si vous les utilisez.
-
-Les éléments de message d'erreur sont déjà placés sous les champs, par exemple
-`#erreur-marque` et `#erreur-prix-jour`. Ajouter `aria-invalid="true"` aux champs
-invalides et le retirer après correction. Le formulaire utilise `novalidate`
-pour vous laisser développer vos propres vérifications JavaScript.
-
-Retirer ou remettre l'attribut `hidden` pour contrôler l'état vide et le bouton
-d'annulation. Les classes `success` et `error` peuvent être appliquées aux messages.
-
-Styles de statut disponibles : `.badge-disponible`, `.badge-louee`,
-`.badge-maintenance`, avec la classe commune `.badge`.
-
-Le tableau défile horizontalement dans sa propre zone sur les petits écrans.
-Le reste de la page reste adapté à la largeur de l'écran.
-
-## À vérifier avant de rendre
-
-- Ajout valide et refus des champs vides ou composés uniquement d'espaces.
-- Prix positif et immatriculation unique, y compris lors d'une modification.
-- Annulation et confirmation des actions.
-- Recherche, filtres et tri utilisés ensemble.
-- Conservation des données après rechargement, même quand le parc est vide.
-- Exactitude des quatre compteurs et navigation entre les deux pages.
-- Utilisation sur mobile et absence d'erreurs dans la console.
-
-Compléter ensuite ce README avec vos choix, les fonctionnalités réalisées,
-l'organisation de vos modules et le lien de déploiement.
+### 📁 Structure des fichiers
