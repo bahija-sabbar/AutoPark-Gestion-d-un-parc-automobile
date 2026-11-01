@@ -8,8 +8,8 @@ Application web vanilla JS permettant de gérer un parc automobile sans backend,
 ### 🔗 Liens
 - **Démo en ligne:** https://ton-lien-vercel.vercel.app
 - **Repo GitHub:**[ https://github.com/ton-pseudo/autopark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
-- **Jira:**![Aperçu AutoPark](./image.png)
-- ![Aperçu AutoPark](./image2.png)
+- **Jira:**![Aperçu AutoPark](.js/jira/image.png)
+- ![Aperçu AutoPark](.js/jira/image2.png)
 ---
 
 ### 🚀 Présentation
