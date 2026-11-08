@@ -1,5 +1,99 @@
 
+
+patrie2
+# 🚗 AutoPark – Configurateur de location
+
+## 📌 Présentation du projet
+
+AutoPark est une application web développée dans le cadre d'un projet individuel chez YouCode, pour une agence fictive de location de voitures appelée **Atlas Auto**.
+
+L'objectif de cette deuxième partie est de créer une interface permettant aux clients de sélectionner un véhicule et de définir leur période de location.
+
+### 🔗 Liens
+- **Démo en ligne:** (https://bahija-sabbar.github.io/AutoPark-Gestion-d-un-parc-automobile/)
+- **Repo GitHub:**(https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
+- **Jira:**![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image.png)
+- ![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image2.png))
+---
+## 🛠️ Technologies utilisées
+
+- HTML5
+- CSS3
+- JavaScript Vanilla
+- Manipulation du DOM
+
+## ✨ Fonctionnalités réalisées
+
+### 1. Sélection du véhicule
+- Affichage dynamique des véhicules à partir d'un tableau JavaScript.
+- Présentation des informations de chaque véhicule.
+- Affichage de la marque et du modèle.
+- Affichage de la catégorie et du prix journalier.
+- Affichage du statut de disponibilité.
+- Sélection d'un véhicule.
+- Mise en évidence du véhicule sélectionné.
+- Actualisation des informations du véhicule dans la zone latérale.
+
+### 2. Gestion des dates
+- Sélection de la date de début et de fin de location.
+- Vérification des dates obligatoires.
+- Vérification de la date de début pour empêcher une date passée.
+- Vérification de la date de fin pour empêcher une date antérieure au début.
+- Calcul du nombre de jours de location.
+- Limitation de la durée de location à 30 jours.
+- Affichage des messages d'erreur.
+- Affichage de la durée de location lorsque les dates sont valides.
+
+## 🚘 Véhicules proposés
+
+| Véhicule | Catégorie | Prix / jour |
+|---|---|---:|
+| Dacia Sandero | Citadine | 250 MAD |
+| Renault Clio | Citadine | 300 MAD |
+| Dacia Duster | SUV | 450 MAD |
+
+## 📂 Structure du projet
+
+```text
+AutoPark-Configurateur-Location/
+│
+├── location.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── README.md
+```
+
+## 🚀 Installation et lancement
+
+1. Cloner le dépôt GitHub :
+
+```bash
+git clone URL_DU_DEPOT
+```
+
+2. Ouvrir le dossier du projet dans Visual Studio Code.
+
+3. Lancer le fichier `location.html` avec Live Server.
+
+## 👩‍💻 Réalisation
+
+- Formation : YouCode
+- Type de projet : Travail individuel
+- Agence fictive : Atlas Auto
+- Durée : 4 jours
+- Date de lancement : 02 Novembre 2026
+- Date de rendu : 05 Novembre 2026
+
+partie1
 # AutoPark - Gestion de Parc Automobile
+## 📌 État du projet
+
+Projet en cours de développement.
 
 Projet individuel DWWM - Atlas Auto, agence fictive de location de voitures.
 
