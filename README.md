@@ -12,8 +12,8 @@ L'objectif de cette deuxième partie est de créer une interface permettant aux 
 ### 🔗 Liens
 - **Démo en ligne:** (https://bahija-sabbar.github.io/AutoPark-Gestion-d-un-parc-automobile/)
 - **Repo GitHub:**(https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile)
-- **Jira:**![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image.png)
-- ![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image2.png))
+- **Jira:**![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image3.png)
+- ![Aperçu AutoPark](https://github.com/bahija-sabbar/AutoPark-Gestion-d-un-parc-automobile/blob/main/js/jira/image4.png))
 ---
 ## 🛠️ Technologies utilisées
 
