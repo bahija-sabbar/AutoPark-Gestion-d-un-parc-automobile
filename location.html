@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AutoPark — Interface de gestion du parc automobile Atlas Auto." />
+  <title>Gestion du parc · AutoPark</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/voitures.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="voitures.html" aria-label="AutoPark — Gestion du parc">
+        <span class="brand-mark" aria-hidden="true">A<span>.</span></span>
+        <span>AutoPark<small>ATLAS AUTO</small></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <!-- index.html est le dashboard à créer par l'apprenant. -->
+        <a href="index.html">Dashboard</a>
+        <a href="voitures.html" aria-current="page">Gestion du parc</a>
+        <a href="location.html" aria-current="page">Ma location</a>
+      </nav>
+      <span class="agency-label">Agence de location</span>
+    </div>
+  </header>
+
+  <main id="contenu" class="container main-content">
+    <section class="page-intro" aria-labelledby="titre-page">
+      <p class="eyebrow">VOTRE LOCATION SUR MESURE</p>
+      <h1 id="titre-page">Composez votre location</h1>
+      <p>Votre voiture, vos dates, vos options. À vous de choisir.</p>
+    </section>
+
+   
+
+    <div class="progress">
+      <div class="step active"><span>1</span> Véhicule</div>
+      <div class="step"><span>2</span> Récupération</div>
+      <div class="step"><span>3</span> Options</div>
+      <div class="step"><span>4</span> Récapitulatif</div>
+    </div>
+
+    <div class="layout">
+      <div class="card">
+        <p class="mini-blue">01 / VÉHICULE</p>
+        <h2>Choisissez votre véhicule</h2>
+        <p class="small-grey">Sélectionnez une voiture disponible et votre période de location.</p>
+
+        <div class="cars">
+ 
+  <label class="car selected">
+    <input type="radio" name="voitureSelectionnee" value="Dacia Sandero" checked hidden>
+    <div class="car-top">
+      <span class="tag">Citadine</span>
+      <div class="radio on"></div>
+    </div>
+    <b>Dacia Sandero</b>
+    <p class="green">Disponible</p>
+    <p class="price">250 MAD / jour</p>
+  </label>
+
+ 
+  <label class="car">
+    <input type="radio" name="voitureSelectionnee" value="Renault Clio" hidden>
+    <div class="car-top">
+      <span class="tag">Citadine</span>
+      <div class="radio"></div>
+    </div>
+    <b>Renault Clio</b>
+    <p class="green">Disponible</p>
+    <p class="price">300 MAD / jour</p>
+  </label>
+
+ 
+  <label class="car">
+    <input type="radio" name="voitureSelectionnee" value="Dacia Duster" hidden>
+    <div class="car-top">
+      <span class="tag">SUV</span>
+      <div class="radio"></div>
+    </div>
+    <b>Dacia Duster</b>
+    <p class="green">Disponible</p>
+    <p class="price">450 MAD / jour</p>
+  </label>
+</div>
+           <h3>Votre période de location</h3>
+      <div class="dates">
+        <div><label>Date de début *</label><input type="date" ></div>
+        <div><label>Date de fin *</label><input  type="date"  ></div>
+      </div>
+      <div class="info">Durée : 3 jours. Les dates de début et de fin sont incluses.</div>
+      <div class="buttons">
+        <button  type="submit" class="btn-white">Recommencer</button>
+        <button    type="submit" class="btn-blue">Suivant</button>
+      </div>
+    </div>
+     <div class="card side">
+        <p class="mini-blue">VOTRE LOCATION</p>
+        <h3 id="side-title">Dacia Sandero</h3>
+        <p class="small-grey" id="side-desc">Citadine - 250 MAD / jour</p>
+        <hr>
+        <p class="bold-small">10 → 12 novembre 2026</p>
+        <p class="small-grey">3 jours - dates incluses</p>
+        <div class="line"><span>Véhicule - 3 × 250 MAD</span><span>750 MAD</span></div>
+        <div class="line"><span>Récupération</span><b>Gratuite</b></div>
+        <hr>
+        <div class="line total"><span>Total estimé</span><span class="big-blue">750 MAD</span></div>
+  <p class="tiny">Frais de récupération facturés une seule fois.</p>
+  <div class="grey-box">Une demande, sans paiement en ligne.
+      </div>
+
+    </div>
+
+
+  </main>
+<script  src="js/location.js"></script>
+</body>
+
+</html>

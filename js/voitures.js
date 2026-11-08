@@ -211,7 +211,7 @@ function supprimer(id) {
 }
 
 function modifier(id) {
-  const index = voituresInitiales.findIndex(v => v.id === id);
+  const index = voituresInitiales.find(v => v.id === id);
   if (index === -1) return;
   let voiture = voituresInitiales[index];
   marque.value = voiture.marque;
