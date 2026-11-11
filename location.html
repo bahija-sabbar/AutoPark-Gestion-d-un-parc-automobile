@@ -51,9 +51,9 @@
         <h2>Choisissez votre véhicule</h2>
         <p class="small-grey">Sélectionnez une voiture disponible et votre période de location.</p>
 
-        <div class="cars">
+         <div class="cars">
  
-  <label class="car selected">
+  <!-- <label class="car selected">
     <input type="radio" name="voitureSelectionnee" value="Dacia Sandero" checked hidden>
     <div class="car-top">
       <span class="tag">Citadine</span>
@@ -86,17 +86,21 @@
     <b>Dacia Duster</b>
     <p class="green">Disponible</p>
     <p class="price">450 MAD / jour</p>
-  </label>
-</div>
+  </label> -->
+</div> 
            <h3>Votre période de location</h3>
       <div class="dates">
-        <div><label>Date de début *</label><input type="date" ></div>
-        <div><label>Date de fin *</label><input  type="date"  ></div>
+        <div><label>Date de début *</label>
+          <input type="date" id="dateDebut"></div>
+
+        <div><label>Date de fin *</label>
+          <input  type="date" id="dateFin" ></div>
       </div>
-      <div class="info">Durée : 3 jours. Les dates de début et de fin sont incluses.</div>
+      <div class="info" id ="infoDuree">Durée : 3 jours. Les dates de début et de fin sont incluses.</div>
+      <p id="erreurDates"></p>
       <div class="buttons">
         <button  type="submit" class="btn-white">Recommencer</button>
-        <button    type="submit" class="btn-blue">Suivant</button>
+        <button   type="submit" class="btn-blue">Suivant</button>
       </div>
     </div>
      <div class="card side">
